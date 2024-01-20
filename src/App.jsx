@@ -1,16 +1,29 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { Route, Routes } from 'react-router';
+import HomePost from './components/HomePost';
+import Register from './pages/userPages/Register';
+import Login from './pages/userPages/Login';
+import DetailPage from './pages/DetailPage';
+import CreatePost from './pages/CreatePost';
+import EditPost from './pages/EditPost';
+import Profile from './pages/Profile';
+
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <div>
-      <h1 className='text-red-300'>Hello</h1>
+    <div className='App font-opensans' >
+     
+      <Routes>
+        <Route index   path="/" element={<HomePost />} />
+        <Route   path="/posts/post/:id" element={<DetailPage />} />
+       <Route   path="/register" element={<Register /> } />
+        <Route   path="/login" element={<Login /> } />
+        <Route   path="/write" element={<CreatePost /> } /> 
+        <Route   path="/edit/:id" element={<EditPost /> } /> 
+        <Route   path="/profile/:id" element={<Profile /> } /> 
+      </Routes>
+     
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
