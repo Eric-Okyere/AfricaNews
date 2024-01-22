@@ -108,7 +108,7 @@ const CreatePost = () => {
             //   onClick={handleCreate}
             className='bg-black w-full mx-auto text-white rounded-lg font-semibold px-4 py-2 md:text-xl text-lg'
           >
-            Create
+            Create a post
           </button>
         </form>
       </div>

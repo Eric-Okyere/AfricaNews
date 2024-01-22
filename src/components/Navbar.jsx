@@ -7,7 +7,7 @@ import { FaUserAlt, FaPen } from "react-icons/fa";
 
 const Navbar = () => {
   const [isSidebarOpen, setSidebarOpen] = useState(false);
-  const user = false; // Replace this with your user check logic
+  const user = true; // Replace this with your user check logic
 
   const toggleSidebar = () => {
     setSidebarOpen(!isSidebarOpen);
@@ -51,7 +51,7 @@ const Navbar = () => {
         <div className={`lg:flex px-8 lg:mr-10 lg:space-x-10 space-x-4 ${isSidebarOpen ? 'flex' : 'hidden'}`}>
           {user ? (
             <h3 className='font-bold'>
-              <Link to={"post"} onClick={toggleSidebar}>
+              <Link to={"/write"} onClick={toggleSidebar}>
               <FaPen />
               </Link>
             </h3>
@@ -65,7 +65,7 @@ const Navbar = () => {
 
           {user ? (
             <h3 className='font-bold'>
-              <Link to={"/profile"} onClick={toggleSidebar}>
+              <Link to={"/profile/id"} onClick={toggleSidebar}>
               <FaUserAlt />
               </Link>
             </h3>

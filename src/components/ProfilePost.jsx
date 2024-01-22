@@ -1,5 +1,7 @@
 import React from 'react';
 import Logo from "../assets/Logo.png"
+import { BiEdit } from 'react-icons/bi';
+import { MdDelete } from 'react-icons/md';
 
 const ProfilePost = () => {
   return (
@@ -30,7 +32,13 @@ const ProfilePost = () => {
           <p className='text-lg md:text-lg w-full'>
             Production is where you make your app available to billions of users on Google Play. Before you can apply for production access, you need to run a closed test that meets our criteria. When you apply, you'll also need to answer some questions about your closed test.
           </p>
+
+          <div className='flex items-center justify-center space-x-32 py-4'>
+<BiEdit size={30}/>
+<MdDelete size={30}/>
+  </div>
         </div>
+        
       </div>
     </div>
   );

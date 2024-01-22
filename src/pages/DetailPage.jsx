@@ -7,6 +7,7 @@ import Logo from"../assets/Logo.png"
 import Comment from '../components/Comment'
 
 const DetailPage = () => {
+  
   return (
     <div >
         <Navbar />
@@ -17,10 +18,10 @@ const DetailPage = () => {
   THIS IS THE TITLE
   </h1>
 
-  <div className='flex items-center justify-center space-x-6'>
+  {/* <div className='flex items-center justify-center space-x-6'>
 <BiEdit size={30}/>
 <MdDelete size={30}/>
-  </div>
+  </div> */}
  
       </div>
 

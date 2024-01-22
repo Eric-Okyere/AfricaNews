@@ -11,11 +11,7 @@ const HomePost = ({children}) => {
 
     <div>
       <Home />
-      <Home />
-      <Home />
-      <Home />
-      <Home />
-      <Home />
+      
       </div>
 
       <Footer />
