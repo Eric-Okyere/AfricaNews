@@ -8,10 +8,11 @@ import { Link } from 'react-router-dom';
 const Home = () => {
   return (
     <div className='w-full'>
+     
       <div className='pt-20'></div>
 
     {News.map((item)=>(
-      
+        <Link to={`/posts/post/${item._id}`} >
       <div key={item._id} className='flex flex-col justify-center items-center md:flex-row w-full space-y-4 md:space-y-0 md:space-x-4 mb-20'>
 
       {/* Left */}
@@ -38,13 +39,13 @@ const Home = () => {
          {item.description}
         </p>
 
-        <Link to={`/posts/post/${item._id}`} className='text-blue-600'>Read More</Link>
+      
       </div>
-      
+    
     </div>
-  
+    </Link>
     ))}
-      
+        
     </div>
   );
 }
